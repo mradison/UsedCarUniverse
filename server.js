@@ -41,21 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-
-var model = 'camry'                                          
-$.ajax({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/cars?model=' + model,
-    headers: { 'X-Api-Key': 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
-
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(
@@ -63,3 +48,53 @@ sequelize.sync({ force: false }).then(() => {
     )
   );
 });
+
+$(document).ready(function () {
+
+
+  getCar()
+
+  //scroll back to top button
+  $('.top').on('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  var model = 'camry';
+  // pulls random recipes from api
+  function getCar(car) {
+    var apiURL = `https://api.api-ninjas.com/v1/cars?model=${model}`
+
+    fetch(apiURL, {
+      headers: {
+        'X-Api-Key': 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl'
+      },
+
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+
+        for (var i = 0; i < data.length; i++) {
+          let carMake = document.createElement('li');
+          let carModel = document.createElement('li');
+          let carClass = document.createElement('li');
+          let carYear = document.createElement('li');
+          let carMilesPerGallon = document.createElement('li');
+
+          carMake.textContent = data.hits[i].label;
+
+          container.append(carMake);
+          container.append(carModel);
+          container.append(carClass);
+          container.append(carYear);
+          container.append(carMilesPerGallon);
+
+        }
+      })
+  }
+})
+
