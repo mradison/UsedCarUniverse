@@ -1,0 +1,22 @@
+<div class="search-bar">
+  <div class="section-search search-style-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+          <div class="clearfix">
+            <form>
+              <section class="container">
+                <h3 class="carlist-name">{{carlist.name}}</h3>
+                <section class="flex-row justify-center">
+                  {{#each carlist.cars as |cars|}}
+                  {{> car-details}}
+                  {{/each}}
+                </section>
+              </section>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
