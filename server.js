@@ -3,9 +3,6 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const apiKey = 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl';
-
-
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -49,52 +46,53 @@ sequelize.sync({ force: false }).then(() => {
   );
 });
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
 
-  getCar()
+//   getCar()
 
-  //scroll back to top button
-  $('.top').on('click', function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-  var model = 'camry';
-  // pulls random recipes from api
-  function getCar(car) {
-    var apiURL = `https://api.api-ninjas.com/v1/cars?model=${model}`
+//   //scroll back to top button
+//   $('.top').on('click', function () {
+//     window.scrollTo({
+//       top: 0,
+//       behavior: "smooth"
+//     });
+//   });
 
-    fetch(apiURL, {
-      headers: {
-        'X-Api-Key': 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl'
-      },
+//   var model = 'camry';
+//   // pulls random recipes from api
+//   function getCar(car) {
+//     var apiURL = `https://api.api-ninjas.com/v1/cars?model=${model}`
 
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
+//     fetch(apiURL, {
+//       headers: {
+//         'X-Api-Key': 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl'
+//       },
 
-        for (var i = 0; i < data.length; i++) {
-          let carMake = document.createElement('li');
-          let carModel = document.createElement('li');
-          let carClass = document.createElement('li');
-          let carYear = document.createElement('li');
-          let carMilesPerGallon = document.createElement('li');
+//     })
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         console.log(data);
 
-          carMake.textContent = data.hits[i].label;
+//         for (var i = 0; i < data.length; i++) {
+//           let carMake = document.createElement('li');
+//           let carModel = document.createElement('li');
+//           let carClass = document.createElement('li');
+//           let carYear = document.createElement('li');
+//           let carMilesPerGallon = document.createElement('li');
 
-          container.append(carMake);
-          container.append(carModel);
-          container.append(carClass);
-          container.append(carYear);
-          container.append(carMilesPerGallon);
+//           carMake.textContent = data.hits[i].label;
 
-        }
-      })
-  }
-})
+//           container.append(carMake);
+//           container.append(carModel);
+//           container.append(carClass);
+//           container.append(carYear);
+//           container.append(carMilesPerGallon);
+
+//         }
+//       })
+//   }
+// })
 
