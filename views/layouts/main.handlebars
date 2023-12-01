@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   {{!--
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> --}}
+   <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <![endif]-->
+   <meta name="description" content="">
+   <meta name="author" content="ScriptsBundle">
+   <title>UsedCarUniverse | Car Dealership - Vehicle Marketplace And Car Services</title>
+   <!-- =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-= -->
+   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+   <!-- =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-= -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <!-- =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/bootstrap.css">
+   <!-- =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-= -->
+   <link href="/css/flaticon.css" rel="stylesheet">
+   <!-- =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/et-line-fonts.css" type="text/css">
+   <!-- =-=-=-=-=-=-= Menu Drop Down =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/carspot-menu.css" type="text/css">
+   <!-- =-=-=-=-=-=-= Animation =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/animate.min.css" type="text/css">
+   <!-- =-=-=-=-=-=-= Select Options =-=-=-=-=-=-= -->
+   <link href="/css/select2.min.css" rel="stylesheet" />
+   <!-- =-=-=-=-=-=-= noUiSlider =-=-=-=-=-=-= -->
+   <link href="/css/nouislider.min.css" rel="stylesheet">
+   <!-- =-=-=-=-=-=-= Listing Slider =-=-=-=-=-=-= -->
+   <link href="/css/slider.css" rel="stylesheet">
+   <!-- =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-= -->
+   <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
+   <link rel="stylesheet" type="text/css" href="/css/owl.theme.css">
+   <!-- =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-= -->
+   <link href="/skins/minimal/minimal.css" rel="stylesheet">
+   <!-- =-=-=-=-=-=-= PrettyPhoto =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/jquery.fancybox.min.css" type="text/css" media="screen" />
+   <!-- =-=-=-=-=-=-= Responsive Media =-=-=-=-=-=-= -->
+   <link href="/css/responsive-media.css" rel="stylesheet">
+   <!-- Base MasterSlider style sheet -->
+   <link rel="stylesheet" href="/js/masterslider/style/masterslider.css" />
+   <link rel="stylesheet" href="/js/masterslider/skins/default/style.css" />
+   <link rel="stylesheet" href="/js/masterslider/style/style.css" />
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7CSource+Sans+Pro:400,400i,600"
+      rel="stylesheet">
+   <!-- JavaScripts -->
+   <script src="/js/modernizr.js"></script>
+</head>
+
+<body>
+   <!-- =-=-=-=-=-=-= Preloader =-=-=-=-=-=-= -->
+   <div class="preloader"></div>
+   <!-- =-=-=-=-=-=-= Color Switcher =-=-=-=-=-=-= -->
+   <div class="color-switcher" id="choose_color">
+      <a href="#." class="picker_close"><i class="fa fa-gear"></i></a>
+      <h5>STYLE SWITCHER</h5>
+      <div class="theme-colours">
+         <p> Choose Colour style </p>
+         <ul>
+            <li>
+               <a href="#." class="defualt" id="defualt"></a>
+            </li>
+            <li>
+               <a href="#." class="green" id="green"></a>
+            </li>
+            <li>
+               <a href="#." class="purple" id="purple"></a>
+            </li>
+         </ul>
+      </div>
+      <div class="clearfix"> </div>
+   </div>
+   <!-- =-=-=-=-=-=-=  Header =-=-=-=-=-=-= -->
+   <div class="colored-header">
+      <!-- Top Bar -->
+      <div class="header-top">
+         <div class="container">
+            <div class="row">
+               <!-- Header Top Left -->
+               <div class="header-top-left col-md-8 col-sm-6 col-xs-12 hidden-xs">
+                  <ul class="listnone">
+                     <li><a href="about.html"><i class="fa fa-heart-o" aria-hidden="true"></i> About</a></li>
+                     <li><a href="faqs.html"><i class="fa fa-folder-open-o" aria-hidden="true"></i> FAQS</a></li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i> Language <span
+                              class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="#">English</a></li>
+                           <li><a href="#">Swedish</a></li>
+                           <li><a href="#">Arabic</a></li>
+                           <li><a href="#">Russian</a></li>
+                           <li><a href="#">chinese</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Header Top Right Social -->
+               <div class="header-right col-md-4 col-sm-6 col-xs-12 ">
+                  <div class="pull-right">
+                     <ul class="listnone">
+                        <li><a href="login.html"><i class="fa fa-sign-in"></i> Log in</a></li>
+                        <li><a href="register.html"><i class="fa fa-unlock" aria-hidden="true"></i> Register</a></li>
+                        <li class="dropdown">
+                           {{#if logged_in}}
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                              aria-expanded="false"><img class="img-circle resize" alt="" src="images/users/3.jpg">
+                              <span class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/profile">User Profile</a></li>
+                              <li><a href="archives.html">Archives</a></li>
+                              <li><a href="active-ads.html">Active Ads</a></li>
+                              <li><a href="favourite.html">Favourite Ads</a></li>
+                              <li><a href="messages.html">Message Panel</a></li>
+                              <li><a href="deactive.html">Account Deactivation</a></li>
+                           </ul>
+                           {{else}}
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                              aria-expanded="false"><img class="img-circle resize" alt=""
+                                 src="images/users/userIcon.svg">
+                              <span class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="/login">login/signup</a></li>
+                           </ul>
+
+                           {{/if}}
+                     </ul>
+
+                     </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Top Bar End -->
+      <!-- Navigation Menu -->
+      <div class="clearfix"></div>
+      <!-- menu start -->
+      <nav id="menu-1" class="mega-menu">
+         <!-- menu list items container -->
+         <section class="menu-list-items">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                     <!-- menu logo -->
+                     <ul class="menu-logo">
+                        <li>
+                           <a href="/"><img src="images/logo.png" alt="logo"> </a>
+                        </li>
+                     </ul>
+                     <!-- menu links -->
+                     <ul class="menu-links">
+                        <!-- active class -->
+                        <li>
+                           <a href="javascript:void(0)">Home</a>
+                        </li>
+
+                        <li>
+                           <a href="/carlist">carlist</a>
+                        </li>
+
+                        <li>
+                           <a href="javascript:void(0)"> Cars </a>
+
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">Listings </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">Our Partners</a>
+
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">Contact Us </a>
+                        </li>
+                        <li><a href="icons.html">Template Icons </a></li>
+                     </ul>
+                     </li>
+                     </ul>
+                     <ul class="menu-search-bar">
+                        <li>
+                           <a href="post-ad-1.html" class="btn btn-theme">Sell Your Car</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </nav>
+      <!-- menu end -->
+   </div>
+   <div class="clearfix"></div>
+   <!-- =-=-=-=-=-=-= Primary Header End =-=-=-=-=-=-= -->
+   <!-- Master Slider -->
+   <div class="master-slider ms-skin-default" id="masterslider">
+      <!-- slide 1 -->
+      <div class="ms-slide slide-1" data-delay="5">
+         <!-- slide background -->
+         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/slider-banner.jpg"
+            alt="Slide1 background" />
+         <!-- slide thumbnail Image -->
+         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/audi.png" alt="Master Slider"
+            style="left:750px; top:180px;" class="ms-layer" data-type="image" data-delay="1000" data-duration="3000"
+            data-ease="easeOutExpo" data-effect="scalefrom(1.1,1.1,190,0)" />
+         <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
+            data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
+            data-effect="skewleft(30,80)">Find Your Dream Car</h3>
+         <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
+            data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
+               class="font-color font-thin-xs heading-color">Thousand Of Cars Of Your Choice</span></h3>
+         <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text"
+            data-effect="bottom(45)" data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Lorem Ipsum is
+            simply dummy text of the printing typesetting<br>
+            industry is proident sunt in culpa officia deserunt mollit.
+         </h5>
+         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
+            data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)">Search Cars</a>
+      </div>
+      <!-- end of slide -->
+      <!-- slide 2 -->
+      <div class="ms-slide slide-3" data-delay="5">
+         <!-- slide background -->
+         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/slider-banner2.jpg"
+            alt="Slide1 background" />
+         <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
+            data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
+            data-effect="skewleft(30,80)">Welcome to Carspot</h3>
+         <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
+            data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
+               class="font-color font-thin-xs heading-color">Find Your Dream Car</span></h3>
+         <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text"
+            data-effect="bottom(45)" data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Lorem Ipsum is
+            simply dummy text of the printing typesetting<br>
+            industry is proident sunt in culpa officia deserunt mollit.
+         </h5>
+         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
+            data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> View All Cars</a>
+      </div>
+      <!-- end of slide -->
+      <div class="ms-slide slide-2" data-delay="4">
+         <div class="ms-overlay-layers"></div>
+         <!-- slide background -->
+         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/slider-banner4.jpg"
+            alt="Slide1 background" />
+         <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
+            data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
+            data-effect="skewleft(30,80)">Welcome to Carspot</h3>
+         <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
+            data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
+               class="font-color font-thin-xs heading-color">Find Your Dream Car</span></h3>
+         <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text"
+            data-effect="bottom(45)" data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Lorem Ipsum is
+            simply dummy text of the printing typesetting<br>
+            industry is proident sunt in culpa officia deserunt mollit.
+         </h5>
+         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
+            data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> View All Cars</a>
+      </div>
+      <!-- slide 2 -->
+      <!-- end of slide -->
+   </div>
+   <!-- end Master Slider -->
+   <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
+   {{{body}}}
+   <!-- Back To Top -->
+   <a href="#0" class="cd-top">Top</a>
+   <!-- =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-= -->
+   <script src="js/jquery.min.js"></script>
+   <!-- Bootstrap Core Css  -->
+   <script src="/js/bootstrap.min.js"></script>
+   <!-- Jquery Easing -->
+   <script src="/js/easing.js"></script>
+   <!-- Menu Hover  -->
+   <script src="/js/carspot-menu.js"></script>
+   <!-- Jquery Appear Plugin -->
+   <script src="js/jquery.appear.min.js"></script>
+   <!-- Numbers Animation   -->
+   <script src="/js/jquery.countTo.js"></script>
+   <!-- Jquery Select Options  -->
+   <script src="/js/select2.min.js"></script>
+   <!-- noUiSlider -->
+   <script src="/js/nouislider.all.min.js"></script>
+   <!-- Carousel Slider  -->
+   <script src="/js/carousel.min.js"></script>
+   <script src="/js/slide.js"></script>
+   <!-- Image Loaded  -->
+   <script src="/js/imagesloaded.js"></script>
+   <script src="/js/isotope.min.js"></script>
+   <!-- CheckBoxes  -->
+   <script src="/js/icheck.min.js"></script>
+   <!-- Jquery Migration  -->
+   <script src="/js/jquery-migrate.min.js"></script>
+
+   <!-- Style Switcher -->
+   <script src="/js/color-switcher.js"></script>
+   <!-- PrettyPhoto -->
+   <script src="js/jquery.fancybox.min.js"></script>
+   <!-- Wow Animation -->
+   <script src="/js/wow.js"></script>
+   <!-- Template Core JS -->
+   <script src="/js/custom.js"></script>
+   <!-- For This Page Only -->
+   <!-- MasterSlider -->
+   <script src="/js/masterslider/masterslider.min.js"></script>
+   {{!--
+   <script type="text/javascript">
+      (function ($) {
+         "use strict";
+
+
+         var slider = new MasterSlider();
+
+         // adds Arrows navigation control to the slider.
+         slider.control('arrows');
+
+         slider.setup('masterslider', {
+            width: 1400,    // slider standard width
+            height: 560,   // slider standard height
+            layout: 'fullwidth',
+            loop: true,
+            preload: 0,
+            fillMode: 'fill',
+            instantStartLayers: true,
+            autoplay: true,
+            view: "basic"
+
+         });
+         // add scroll parallax effect
+
+      })(jQuery);
+
+
+
+
+
+
+
+   </script> --}}
+</body>
+
+</html>
