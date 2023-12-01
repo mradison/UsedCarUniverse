@@ -9845,3 +9845,18 @@ footer.footer-bg {
     font-size: 26px;
     font-weight: 600;
 }
+
+.Generate {
+    background-color: rgb(250, 229, 221);
+    cursor: pointer;
+    font-size: 24px;
+    border: solid 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px;
+  }
+
+  .carlist
