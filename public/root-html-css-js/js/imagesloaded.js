@@ -1,9 +1,13 @@
 /*!
- * 
+ * imagesLoaded PACKAGED v3.0.2
+ * JavaScript is all like "You images are done yet or what?"
  */
 
 /*!
- *
+ * EventEmitter v4.1.0 - git.io/ee
+ * Oliver Caldwell
+ * MIT license
+ * @preserve
  */
 
 (function (exports) {
