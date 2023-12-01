@@ -148,6 +148,8 @@
 .mega-menu .menu-logo > li > a img {
   /*--------------------------------------- LOGO IMAGE ICON */
   position:relative;
+  max-width: 95px !important;
+  margin: 0;
 }
 
 .mega-menu .menu-links {

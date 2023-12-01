@@ -36,7 +36,7 @@
 .owl-theme .owl-dots .owl-dot{
 	display: inline-block;
 	zoom: 1;
-	display: inline;/*IE7 life-saver */
+	*display: inline;/*IE7 life-saver */
 }
 
 .owl-theme .owl-dots .owl-dot span{
