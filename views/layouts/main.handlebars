@@ -2,33 +2,26 @@
 <html lang="en">
 
 <head>
-   {{!--
-   <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> --}}
    <!--[if IE]>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <![endif]-->
    <meta name="description" content="">
    <meta name="author" content="ScriptsBundle">
-   <title>UsedCarUniverse | Car Dealership - Vehicle Marketplace And Car Services</title>
+   <title>UsedCarUniverse</title>
    <!-- =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-= -->
-   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+   <link rel="icon" href="/images/favicon.png" type="image/x-icon">
    <!-- =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-= -->
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <!-- =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-= -->
    <link rel="stylesheet" href="/css/bootstrap.css">
    <!-- =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-= -->
-   <link rel="stylesheet" href="/css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/css/style_2.css">
+   <!-- =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-= -->
+   <link rel="stylesheet" href="/css/font-awesome.css" type="text/css">
    <!-- =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-= -->
    <link href="/css/flaticon.css" rel="stylesheet">
-   <!-- =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-= -->
-   <link rel="stylesheet" href="/css/et-line-fonts.css" type="text/css">
    <!-- =-=-=-=-=-=-= Menu Drop Down =-=-=-=-=-=-= -->
    <link rel="stylesheet" href="/css/carspot-menu.css" type="text/css">
-   <!-- =-=-=-=-=-=-= Animation =-=-=-=-=-=-= -->
-   <link rel="stylesheet" href="/css/animate.min.css" type="text/css">
-   <!-- =-=-=-=-=-=-= Select Options =-=-=-=-=-=-= -->
-   <link href="/css/select2.min.css" rel="stylesheet" />
    <!-- =-=-=-=-=-=-= noUiSlider =-=-=-=-=-=-= -->
    <link href="/css/nouislider.min.css" rel="stylesheet">
    <!-- =-=-=-=-=-=-= Listing Slider =-=-=-=-=-=-= -->
@@ -36,16 +29,15 @@
    <!-- =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-= -->
    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
    <link rel="stylesheet" type="text/css" href="/css/owl.theme.css">
-   <!-- =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-= -->
-   <link href="/skins/minimal/minimal.css" rel="stylesheet">
-   <!-- =-=-=-=-=-=-= PrettyPhoto =-=-=-=-=-=-= -->
-   <link rel="stylesheet" href="/css/jquery.fancybox.min.css" type="text/css" media="screen" />
    <!-- =-=-=-=-=-=-= Responsive Media =-=-=-=-=-=-= -->
    <link href="/css/responsive-media.css" rel="stylesheet">
+   <!-- =-=-=-=-=-=-= Template Color =-=-=-=-=-=-= -->
+   <link rel="stylesheet" id="color" href="/css/defualt.css">
+   <!-- For This Page Only -->
    <!-- Base MasterSlider style sheet -->
-   <link rel="stylesheet" href="/js/masterslider/style/masterslider.css" />
-   <link rel="stylesheet" href="/js/masterslider/skins/default/style.css" />
-   <link rel="stylesheet" href="/js/masterslider/style/style.css" />
+   <link rel="stylesheet" href="/css/masterslider.css">
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/style_1.css">
    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7CSource+Sans+Pro:400,400i,600"
       rel="stylesheet">
    <!-- JavaScripts -->
@@ -55,26 +47,6 @@
 <body>
    <!-- =-=-=-=-=-=-= Preloader =-=-=-=-=-=-= -->
    <div class="preloader"></div>
-   <!-- =-=-=-=-=-=-= Color Switcher =-=-=-=-=-=-= -->
-   <div class="color-switcher" id="choose_color">
-      <a href="#." class="picker_close"><i class="fa fa-gear"></i></a>
-      <h5>STYLE SWITCHER</h5>
-      <div class="theme-colours">
-         <p> Choose Colour style </p>
-         <ul>
-            <li>
-               <a href="#." class="defualt" id="defualt"></a>
-            </li>
-            <li>
-               <a href="#." class="green" id="green"></a>
-            </li>
-            <li>
-               <a href="#." class="purple" id="purple"></a>
-            </li>
-         </ul>
-      </div>
-      <div class="clearfix"> </div>
-   </div>
    <!-- =-=-=-=-=-=-=  Header =-=-=-=-=-=-= -->
    <div class="colored-header">
       <!-- Top Bar -->
@@ -84,12 +56,11 @@
                <!-- Header Top Left -->
                <div class="header-top-left col-md-8 col-sm-6 col-xs-12 hidden-xs">
                   <ul class="listnone">
-                     <li><a href="about.html"><i class="fa fa-heart-o" aria-hidden="true"></i> About</a></li>
-                     <li><a href="faqs.html"><i class="fa fa-folder-open-o" aria-hidden="true"></i> FAQS</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i> Language <span
-                              class="caret"></span></a>
+                     <li><a href="/about.html"><i class="fa fa-heart-o" aria-hidden="true"></i> About</a></li>
+                     <li><a href="/faqs.html"><i class="fa fa-folder-open-o" aria-hidden="true"></i> FAQS</a></li>
+                     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i>
+                           Language <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="#">English</a></li>
                            <li><a href="#">Swedish</a></li>
@@ -104,34 +75,30 @@
                <div class="header-right col-md-4 col-sm-6 col-xs-12 ">
                   <div class="pull-right">
                      <ul class="listnone">
-                        <li><a href="login.html"><i class="fa fa-sign-in"></i> Log in</a></li>
-                        <li><a href="register.html"><i class="fa fa-unlock" aria-hidden="true"></i> Register</a></li>
+                        <li><a href="/login.html"><i class="fa fa-sign-in"></i> Log in</a></li>
+                        <li><a href="/register.html"><i class="fa fa-unlock" aria-hidden="true"></i> Register</a></li>
                         <li class="dropdown">
                            {{#if logged_in}}
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                              aria-expanded="false"><img class="img-circle resize" alt="" src="images/users/3.jpg">
-                              <span class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
+                              aria-expanded="false"><img class="img-circle resize" alt="" src="images/3.jpg"> <span
+                                 class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
                            <ul class="dropdown-menu">
-                              <li><a href="/profile">User Profile</a></li>
-                              <li><a href="archives.html">Archives</a></li>
-                              <li><a href="active-ads.html">Active Ads</a></li>
-                              <li><a href="favourite.html">Favourite Ads</a></li>
-                              <li><a href="messages.html">Message Panel</a></li>
-                              <li><a href="deactive.html">Account Deactivation</a></li>
-                           </ul>
-                           {{else}}
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                              aria-expanded="false"><img class="img-circle resize" alt=""
-                                 src="images/users/userIcon.svg">
-                              <span class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li><a href="/login">login/signup</a></li>
-                           </ul>
+                              <li><a href="/profile.html">User Profile</a></li>
+                              <li><a href="/active-ads.html">Active Ads</a></li>
+                              <li><a href="/messages.html">Message Panel</a></li>
+                              {{else}}
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                 aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt=""
+                                    src="/images/users/userIcon.svg">
+                                 <span class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                 <li><a href="/login">login/signup</a></li>
+                              </ul>
 
-                           {{/if}}
-                     </ul>
+                              {{/if}}
 
-                     </li>
+                           </ul>
+                        </li>
                      </ul>
                   </div>
                </div>
@@ -151,42 +118,26 @@
                      <!-- menu logo -->
                      <ul class="menu-logo">
                         <li>
-                           <a href="/"><img src="images/logo.png" alt="logo"> </a>
+                           <a href="index.html"><img src="images/logo.png" alt="logo"> </a>
                         </li>
                      </ul>
                      <!-- menu links -->
                      <ul class="menu-links">
                         <!-- active class -->
-                        <li>
-                           <a href="javascript:void(0)">Home</a>
+                        <li> <a href="javascript:void(0)">Home</a> </li>
+                        <li> <a href="javascript:void(0)">Listing </a> </li>
+                        <li> <a href="javascript:void(0)">Reviews <i class="fa fa-angle-down fa-indicator"></i></a>
+                           <!-- drop down multilevel  -->
+                           <ul class="drop-down-multilevel">
+                              <li><a href="reviews.html">Expert Reviews</a></li>
+                              <li><a href="review-detail.html">Review Detial</a></li>
+                           </ul>
                         </li>
-
-                        <li>
-                           <a href="/carlist">carlist</a>
-                        </li>
-
-                        <li>
-                           <a href="javascript:void(0)"> Cars </a>
-
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)">Listings </a>
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)">Our Partners</a>
-
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)">Contact Us </a>
-                        </li>
-                        <li><a href="icons.html">Template Icons </a></li>
-                     </ul>
-                     </li>
+                        <li> <a href="javascript:void(0)">Compare </a> </li>
+                        <li> <a href="javascript:void(0)">Dashboard </i></a> </li>
                      </ul>
                      <ul class="menu-search-bar">
-                        <li>
-                           <a href="post-ad-1.html" class="btn btn-theme">Sell Your Car</a>
-                        </li>
+                        <li> <a href="post-ad-1.html" class="btn btn-theme">Sell Your Car</a> </li>
                      </ul>
                   </div>
                </div>
@@ -201,13 +152,11 @@
    <div class="master-slider ms-skin-default" id="masterslider">
       <!-- slide 1 -->
       <div class="ms-slide slide-1" data-delay="5">
-         <!-- slide background -->
-         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/slider-banner.jpg"
-            alt="Slide1 background" />
-         <!-- slide thumbnail Image -->
-         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/audi.png" alt="Master Slider"
+         <!-- slide background --><img src="images/blank.gif" data-src="images/slider/slider-banner.jpg"
+            alt="Slide1 background">
+         <!-- slide thumbnail Image --><img src="images/blank.gif" data-src="images/slider/audi.png" alt="Master Slider"
             style="left:750px; top:180px;" class="ms-layer" data-type="image" data-delay="1000" data-duration="3000"
-            data-ease="easeOutExpo" data-effect="scalefrom(1.1,1.1,190,0)" />
+            data-ease="easeOutExpo" data-effect="scalefrom(1.1,1.1,190,0)">
          <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
             data-effect="skewleft(30,80)">Find Your Dream Car</h3>
@@ -218,19 +167,17 @@
             data-effect="bottom(45)" data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Lorem Ipsum is
             simply dummy text of the printing typesetting<br>
             industry is proident sunt in culpa officia deserunt mollit.
-         </h5>
-         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
+         </h5> <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
             data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)">Search Cars</a>
       </div>
       <!-- end of slide -->
       <!-- slide 2 -->
       <div class="ms-slide slide-3" data-delay="5">
-         <!-- slide background -->
-         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/slider-banner2.jpg"
-            alt="Slide1 background" />
+         <!-- slide background --><img src="images/blank.gif" data-src="images/slider/slider-banner2.jpg"
+            alt="Slide1 background">
          <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
-            data-effect="skewleft(30,80)">Welcome to Carspot</h3>
+            data-effect="skewleft(30,80)">Welcome to UsedCarUniverse</h3>
          <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
             data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
                class="font-color font-thin-xs heading-color">Find Your Dream Car</span></h3>
@@ -238,19 +185,17 @@
             data-effect="bottom(45)" data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Lorem Ipsum is
             simply dummy text of the printing typesetting<br>
             industry is proident sunt in culpa officia deserunt mollit.
-         </h5>
-         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
+         </h5> <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
             data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> View All Cars</a>
       </div>
       <!-- end of slide -->
       <div class="ms-slide slide-2" data-delay="4">
          <div class="ms-overlay-layers"></div>
-         <!-- slide background -->
-         <img src="/js/masterslider/style/blank.gif" data-src="images/slider/slider-banner4.jpg"
-            alt="Slide1 background" />
+         <!-- slide background --><img src="images/blank.gif" data-src="images/slider/slider-banner4.jpg"
+            alt="Slide1 background">
          <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
-            data-effect="skewleft(30,80)">Welcome to Carspot</h3>
+            data-effect="skewleft(30,80)">Welcome to UsedCarUniverse</h3>
          <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
             data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
                class="font-color font-thin-xs heading-color">Find Your Dream Car</span></h3>
@@ -258,8 +203,7 @@
             data-effect="bottom(45)" data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Lorem Ipsum is
             simply dummy text of the printing typesetting<br>
             industry is proident sunt in culpa officia deserunt mollit.
-         </h5>
-         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
+         </h5> <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
             data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> View All Cars</a>
       </div>
       <!-- slide 2 -->
