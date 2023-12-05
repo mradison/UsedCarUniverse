@@ -4,7 +4,7 @@ function handleSubmit(e){
     e.preventDefault()
     console.log('searhc form please work')
     // redirect them to the carlist route /carlist/${inputEl.value}
-    
+    window.location.href = `/carlist/${inputEl.value}`;
 }
 
 
