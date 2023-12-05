@@ -1,4 +1,4 @@
-const User = require('./User');
+// const User = require('./User');
 const Cars = require('./Cars');
 const Car = require('./Car');
 
@@ -10,4 +10,5 @@ Car.belongsTo(Cars, {
   foreignKey: 'cars_id',
 });
 
-module.exports = { User, Cars, Car };
+//add user back
+module.exports = { Cars, Car };
