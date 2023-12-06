@@ -3,14 +3,23 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const apiKey = 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl';
 
-
-
-const routes = require('./controllers');
+// Database connection
 const sequelize = require('./config/connection');
+
+// Import models
+const User = require('./models/User'); // Import the User model
+// Import other models here as necessary, for example:
+// const Post = require('./models/Post');
+// const Comment = require('./models/Comment');
+
+// Import route controllers
+const routes = require('./controllers'); // Adjust path as necessary
+const additionalSpecificRoutes = require('./routes/additionalSpecificRoutes'); // Adjust path as necessary
+
 const helpers = require('./utils/helpers');
 
+// Initialize Express
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -18,8 +27,8 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    // Stored in milliseconds
-    maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+    // Stored in milliseconds (24 hours)
+    maxAge: 24 * 60 * 60 * 1000,
   },
   resave: false,
   saveUninitialized: true,
@@ -30,71 +39,25 @@ const sess = {
 
 app.use(session(sess));
 
+// Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
-
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use the imported routes
 app.use(routes);
+app.use('/api', additionalSpecificRoutes); // Add your additional specific routes under the '/api' path
 
+// Sync sequelize models to the database, then start the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(
-      `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`
-    )
+    console.log(`Server running on port ${PORT}. Visit http://localhost:${PORT} to view the application.`)
   );
 });
 
-$(document).ready(function () {
-
-
-  getCar()
-
-  //scroll back to top button
-  $('.top').on('click', function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-  var model = 'camry';
-  // pulls random recipes from api
-  function getCar(car) {
-    var apiURL = `https://api.api-ninjas.com/v1/cars?model=${model}`
-
-    fetch(apiURL, {
-      headers: {
-        'X-Api-Key': 'wvSSR9wHZbLXlJPozQR3NA==tzNedxcrYn11gHTl'
-      },
-
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-
-        for (var i = 0; i < data.length; i++) {
-          let carMake = document.createElement('li');
-          let carModel = document.createElement('li');
-          let carClass = document.createElement('li');
-          let carYear = document.createElement('li');
-          let carMilesPerGallon = document.createElement('li');
-
-          carMake.textContent = data.hits[i].label;
-
-          container.append(carMake);
-          container.append(carModel);
-          container.append(carClass);
-          container.append(carYear);
-          container.append(carMilesPerGallon);
-
-        }
-      })
-  }
-})
 
