@@ -10,14 +10,29 @@
                 <section class="flex-row justify-center">
                   {{#each data as |cars|}}
                   {{!-- {{> car-details}} --}}
-                  <h3>Make: {{cars.make}}</h3>
-                  <h3>Model: {{cars.model}}</h3>
-                  <h4>Class: {{cars.class}}</h4>
-
+                  <div class="row align-center mb-5">
+                    <div class="col-md-6">
+                      <h3>Make: {{cars.make}}</h3>
+                      <h3>Model: {{cars.model}}</h3>
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Class Size: {{cars.class}}</h4>
+                      <h4>Highway MPG: {{cars.highway_mpg}}</h4>
+                      <h4>Highway/City MPG: {{cars.combination_mpg}}</h4>
+                      <h4>Displacement: {{cars.displacement}}</h4>
+                      <h4>Drive: {{cars.drive}}</h4>
+                      <h4>Fuel Type: {{cars.highway_mpg}}</h4>
+                      <h4>Transmission: {{cars.transmission}}</h4>
+                      <h4>Year: {{cars.year}}</h4>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
                   {{/each}}
                 </section>
               </section>
-            {{!-- </form> --}}
+              {{!--
+            </form> --}}
           </div>
         </div>
       </div>
@@ -25,5 +40,5 @@
   </div>
 </div>
 <div>
-{{log 'This is my data' data}}
+  {{log 'This is my data' data}}
 </div>

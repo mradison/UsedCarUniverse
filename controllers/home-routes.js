@@ -3,6 +3,11 @@ const axios = require('axios');
 const { Cars, Car } = require('../models');
 require('dotenv').config();
 
+router.post('/', async (req, res) => {
+  res.redirect(`/car/list/${req.body.model}`);
+  res.status(200)
+  res.end();
+})
 
 router.get('/', async (req, res) => {
   res.render('homepage', {
@@ -10,16 +15,16 @@ router.get('/', async (req, res) => {
   })
 })
 
-router.get('/carlist/:model', async (req, res) => {
+// router.get('/carlist/:model', async (req, res) => {
 
-  var userModel = req.params.model
-  const data = await axios.get('https://api.api-ninjas.com/v1/cars?model=' + userModel,{
-    headers: {
-      'X-Api-Key': process.env.CARS_NINJA_APIKEY
-    },
-  });
+//   var userModel = req.params.model
+//   const data = await axios.get('https://api.api-ninjas.com/v1/cars?model=' + userModel,{
+//     headers: {
+//       'X-Api-Key': process.env.CARS_NINJA_APIKEY
+//     },
+//   });
 
-  console.log(data.data)
+//   console.log(data.data)
 
   // , function (error, response, body) {
   //   if (error) return console.error('Request failed:', error);
@@ -27,12 +32,12 @@ router.get('/carlist/:model', async (req, res) => {
   //   else console.log(body)
   // }
 
-  res.render('carlist', {
-    // logged_in: req.session.user_id,
-    userModel: userModel,
-    data: data.data
-  })
-})
+//   res.render('carlist', {
+//     // logged_in: req.session.user_id,
+//     userModel: userModel,
+//     data: data.data
+//   })
+// })
 
 router.get('/login', async (req, res) => {
   res.render('login')
