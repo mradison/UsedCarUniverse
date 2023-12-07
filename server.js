@@ -15,7 +15,7 @@ const User = require('./models/User'); // Import the User model
 
 // Import route controllers
 // const routes = require('./controllers'); // Adjust path as necessary
-const additionalSpecificRoutes = require('./routes/additionalSpecificRoutes'); // Adjust path as necessary
+// const additionalSpecificRoutes = require('./routes/additionalSpecificRoutes'); // Adjust path as necessary
 
 const helpers = require('./utils/helpers');
 
@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the imported routes
 app.use(routes);
-app.use('/api', additionalSpecificRoutes); // Add your additional specific routes under the '/api' path
+// app.use('/api', additionalSpecificRoutes); // Add your additional specific routes under the '/api' path
 
 // Sync sequelize models to the database, then start the server
 sequelize.sync({ force: false }).then(() => {
