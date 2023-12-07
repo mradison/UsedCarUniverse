@@ -21,13 +21,9 @@
         "express-handlebars": "^5.2.0",
         "express-session": "^1.17.1",
         "handlebars": "^4.7.6",
-<<<<<<< HEAD
         "jsonwebtoken": "^9.0.2",
         "mysql2": "^2.2.5",
-=======
-        "mysql2": "^2.2.5",
         "request": "^2.88.2",
->>>>>>> 14db13a7d615dc0fff5bc37d1105a3a9658cbe32
         "sequelize": "^6.3.5"
     },
     "devDependencies": {

@@ -1,4 +1,4 @@
-const AdditionalSpecificController = {
+AdditionalSpecificController = {
     searchCars: async (req, res) => {
         try {
             // Replace with logic to search for cars
@@ -62,7 +62,7 @@ const AdditionalSpecificController = {
 
 }
 
-const AdditionalSpecificController = {
+AdditionalSpecificController = {
     searchCars: async (req, res) => {
         try {
             // Replace with logic to search for cars
@@ -147,7 +147,7 @@ contactSupport: async (req, res) => {
     }
 },
 
-const AdditionalSpecificController = {
+AdditionalSpecificController : {
     // User and Vehicle Listing Operations
     postVehicleListing: async (req, res) => {
         try {
@@ -284,6 +284,6 @@ const AdditionalSpecificController = {
             res.status(500).json({ error: 'An error occurred while comparing cars.' });
         }
     }
-};
+}}; 
 
 module.exports = AdditionalSpecificController;

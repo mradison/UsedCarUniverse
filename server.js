@@ -14,7 +14,7 @@ const User = require('./models/User'); // Import the User model
 // const Comment = require('./models/Comment');
 
 // Import route controllers
-const routes = require('./controllers'); // Adjust path as necessary
+// const routes = require('./controllers'); // Adjust path as necessary
 const additionalSpecificRoutes = require('./routes/additionalSpecificRoutes'); // Adjust path as necessary
 
 const helpers = require('./utils/helpers');
@@ -59,8 +59,3 @@ sequelize.sync({ force: false }).then(() => {
     console.log(`Server running on port ${PORT}. Visit http://localhost:${PORT} to view the application.`)
   );
 });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 14db13a7d615dc0fff5bc37d1105a3a9658cbe32
