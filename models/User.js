@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+// In User.js or another model file
+User.hasMany(Post, {
+    foreignKey: 'userId',
+    onDelete: 'CASCADE'
+  });
+  
+  Post.belongsTo(User, {
+    foreignKey: 'userId'
+  });
+  
+=======
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -41,3 +53,4 @@ User.init(
 );
 
 module.exports = User;
+>>>>>>> 14db13a7d615dc0fff5bc37d1105a3a9658cbe32
