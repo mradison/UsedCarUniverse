@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Database connection
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
 
 // Import models
@@ -59,5 +59,8 @@ sequelize.sync({ force: false }).then(() => {
     console.log(`Server running on port ${PORT}. Visit http://localhost:${PORT} to view the application.`)
   );
 });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 14db13a7d615dc0fff5bc37d1105a3a9658cbe32

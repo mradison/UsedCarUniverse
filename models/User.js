@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // In User.js or another model file
 User.hasMany(Post, {
     foreignKey: 'userId',
@@ -8,3 +9,48 @@ User.hasMany(Post, {
     foreignKey: 'userId'
   });
   
+=======
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class User extends Model {}
+
+User.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    // username: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [6],
+      },
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
+  }
+);
+
+module.exports = User;
+>>>>>>> 14db13a7d615dc0fff5bc37d1105a3a9658cbe32

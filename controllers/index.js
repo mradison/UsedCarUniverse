@@ -35,3 +35,15 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+const router = require('express').Router();
+
+const carRoutes = require('./car-routes');
+const homeRoutes =  require('./home-routes');
+const apiRoutes = require('./api');
+
+
+router.use('/', homeRoutes);
+router.use('/car', carRoutes);
+router.use('/api', apiRoutes);
+
+module.exports = router;
