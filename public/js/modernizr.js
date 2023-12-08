@@ -1,5 +1,15 @@
 /*!
+ * modernizr v3.3.1
+ * Build https://modernizr.com/download?-setclasses-dontmin
  *
+ * Copyright (c)
+ *  Faruk Ates
+ *  Paul Irish
+ *  Alex Sexton
+ *  Ryan Seddon
+ *  Patrick Kettner
+ *  Stu Cox
+ *  Richard Herrera
 
  * MIT License
  */

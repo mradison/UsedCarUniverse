@@ -1,3 +1,13 @@
+// // In User.js or another model file
+// User.hasMany(Post, {
+//     foreignKey: 'userId',
+//     onDelete: 'CASCADE'
+//   });
+  
+//   Post.belongsTo(User, {
+//     foreignKey: 'userId'
+//   });
+  
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -11,10 +21,10 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // username: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

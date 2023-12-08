@@ -1,9 +1,38 @@
 /*
-
-
+Template: Carspot | Car Dealership - Vehicle Marketplace And Car Services
+Author: ScriptsBundle
+Version: 1.0
+Designed and Development by: ScriptsBundle
 */
 /*
-
+====================================
+[ CSS TABLE CONTENT ]
+------------------------------------
+    1.0 -  Page Preloader
+	2.0 -  Counter FunFacts
+    3.0 -  List Grid Style Switcher
+	4.0 -  Sticky Ads
+	5.0 -  Accordion Panels
+    6.0 -  Accordion Style 2
+	7.0 -  Jquery CheckBoxes
+	8.0 -  Jquery Select Dropdowns
+    9.0 -  Profile Image Upload
+    10.0 - Masonry Grid System
+	11.0 - Featured Carousel 1
+    12.0 - Featured Carousel 2
+	12.0 - Featured Carousel 3
+	13.0 - Category Carousel
+	14.0 - Background Image Rotator Carousel
+	15.0 - Single Ad Slider Carousel
+	16.0 - Single Page SLider With Thumb
+	17.0 - Price Range Slider
+	18.0 - Template MegaMenu
+	19.0 - Back To Top
+	20.0 - Tooltip
+	21.0 - Quick Overview Modal
+-------------------------------------
+[ END JQUERY TABLE CONTENT ]
+=====================================
 */
 (function($) {
     "use strict";

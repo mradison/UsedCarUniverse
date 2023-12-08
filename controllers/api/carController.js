@@ -1,23 +1,21 @@
 // Import your Car model
-// const Car = require('../models/Car'); // Uncomment and modify as per your model file
+const Car = require('../models/Car'); // Modify as per your model file path
 
 const carController = {
-    // List All Cars
+    // List All Used Cars
     getAllCars: async (req, res) => {
         try {
-            // Replace the below line with actual database query logic
-            // const cars = await Car.findAll();
+            const cars = await Car.findAll();
             res.json(cars);
         } catch (error) {
             res.status(500).send('Error fetching cars');
         }
     },
 
-    // Get Car Details
+    // Get Used Car Details
     getCarDetails: async (req, res) => {
         try {
-            // Replace the below line with actual database query logic
-            // const car = await Car.findByPk(req.params.id);
+            const car = await Car.findByPk(req.params.id);
             if (car) {
                 res.json(car);
             } else {
@@ -28,23 +26,31 @@ const carController = {
         }
     },
 
-    // Update Car Information
+    // Update Used Car Information
     updateCarInfo: async (req, res) => {
         try {
-            // Add your update logic here, and return the updated car details
-            // const updatedCar = await Car.update(req.body, { where: { id: req.params.id } });
-            res.send('Car updated successfully');
+            const updatedCar = await Car.update(req.body, { 
+                where: { id: req.params.id } 
+            });
+            if (updatedCar[0] > 0) {
+                res.send('Car updated successfully');
+            } else {
+                res.status(404).send('Car not found');
+            }
         } catch (error) {
             res.status(500).send('Error updating car');
         }
     },
 
-    // Delete a Car Listing
+    // Delete a Used Car Listing
     deleteCarListing: async (req, res) => {
         try {
-            // Add your delete logic here
-            // await Car.destroy({ where: { id: req.params.id } });
-            res.send('Car deleted successfully');
+            const deleted = await Car.destroy({ where: { id: req.params.id } });
+            if (deleted) {
+                res.send('Car deleted successfully');
+            } else {
+                res.status(404).send('Car not found');
+            }
         } catch (error) {
             res.status(500).send('Error deleting car');
         }

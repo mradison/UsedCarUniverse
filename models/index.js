@@ -10,4 +10,5 @@ Car.belongsTo(Cars, {
   foreignKey: 'cars_id',
 });
 
-module.exports = { User, Cars, Car };
+//add user back - Completed
+module.exports = { Cars, Car, User };
