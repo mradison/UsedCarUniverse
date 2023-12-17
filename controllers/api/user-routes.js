@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // api/users
-router.post('/api/users/signup', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     console.log(req.body)
     const userData = await User.create(req.body);
@@ -10,6 +10,7 @@ router.post('/api/users/signup', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+      req.session.email = userData.email
 
       res.status(200).json(userData);
     });
@@ -42,6 +43,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+      req.session.email = userData.email
       
       res.json({ user: userData, message: 'You are now logged in!' });
     });

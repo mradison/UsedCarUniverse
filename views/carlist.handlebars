@@ -8,12 +8,18 @@
               <section class="container">
                 <h3 class="carlist-name">{{carlist.name}}</h3>
                 <section class="flex-row justify-center">
-                  {{#each data as |cars|}}
+                  {{#each mData as |cars|}}
                   {{!-- {{> car-details}} --}}
                   <div class="row align-center mb-5">
+                    <h2>{{cars.heading}}</h2>
                     <div class="col-md-6">
-                      <h3>Make: {{cars.make}}</h3>
-                      <h3>Model: {{cars.model}}</h3>
+                      <h5>Make: {{cars.build.make}}</h5>
+                      <h5>Model: {{cars.build.model}}</h5>
+                      <div>
+                        {{#each cars.media.photo_links as |pic|}}
+<img src="{{pic}}" width="150" height="150"/>
+                        {{/each}}
+                      </div>
                     </div>
                     <div class="col-md-6">
                       <h4>Class Size: {{cars.class}}</h4>
@@ -40,5 +46,5 @@
   </div>
 </div>
 <div>
-  {{log 'This is my data' data}}
+
 </div>

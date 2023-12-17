@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const axios = require('axios');
-const { Cars, Car } = require('../models');
+const { User, Car } = require('../models');
 const withAuth = require('../utils/withAuth')
 
 require('dotenv').config();
@@ -8,31 +8,31 @@ require('dotenv').config();
 router.get('/list/:model', withAuth, async (req, res) => {
   var userModel = req.params.model
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-    });
-
+   
+    const marketCheckApi = await fetch(`http://marketcheck-prod.apigee.net/v2/search/car/active?api_key=${process.env.marketCheckKey}&model=${userModel}&state=az`, {
+      headers: {
+        'method': 'GET', 
+        'content-type': 'application/json'
+      }
+    })
+    const marketData = await marketCheckApi.json()
     const data = await axios.get('https://api.api-ninjas.com/v1/cars?model=' + userModel, {
       headers: {
         'X-Api-Key': process.env.CARS_NINJA_APIKEY
       },
     });
+   
+    // console.log('marketCheck: ',marketData.listings[0]);
 
-    console.log(data.data)
+    // console.log(data.data)
     res.render('carlist', {
       logged_in: req.session.logged_in,
       userModel: userModel,
-      data: data.data
+      data: data.data,
+      mData: marketData.listings,
+      email: req.session.email
     })
 
-    const users = userData.map((project) => project.get({ plain: true }));
-
-    res.render('homepage', {
-      users,
-      // Pass the logged in flag to the template
-      logged_in: req.session.logged_in,
-    });
   } catch (err) {
     res.status(500).json(err);
   }
