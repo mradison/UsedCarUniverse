@@ -41,10 +41,9 @@ Set up the database and Start the application: <code>npm start</code>
 Open your browser and visit https://aqueous-coast-47792-7cd474c52b1d.herokuapp.com/ to access UsedCarUniverse.
 
 
-
-
-
 ## Usage
+
+Once you sign up for an account then you can search for cars by putting the name of a car model in the search box. 
 
 Buyer Perspective:
 Browse Cars: Explore a wide range of used cars listed on the platform.
